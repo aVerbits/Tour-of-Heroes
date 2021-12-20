@@ -9,11 +9,15 @@ import { HEROES } from '../mocks/mock-heroes';
 })
 export class HeroesComponent {
 
-heroes: Hero[] = HEROES; 
+  heroes = HEROES;
+  selectedHero?: Hero;
 
-hero: Hero = {
-  id:1,
-  name: "Windshtorm"
-}
+  constructor() { }
 
+  ngOnInit(): void {
+  }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
