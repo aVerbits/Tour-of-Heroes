@@ -10,14 +10,15 @@ import { HEROES } from '../../mocks';
 export class HeroesComponent {
 
   heroes = HEROES;
+  // selectedHero: Hero;
+
+ 
+
+  // onSelect(hero: Hero) {
+  //   this.selectedHero = hero;
+  // }
   selectedHero?: Hero;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+}
 }
